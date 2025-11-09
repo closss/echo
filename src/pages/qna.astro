@@ -1,0 +1,39 @@
+﻿---
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+import QnaCard from "@components/QnaCard.astro";
+import { getCollection } from "astro:content";
+import { url } from "@/utils/url-utils";
+
+const qna = (await getCollection("qna", ({ data }) => {
+  return import.meta.env.PROD ? data.draft !== true : true;
+}))
+.sort((a, b) => {
+  if (a.data.pinned && !b.data.pinned) return -1;
+  if (!a.data.pinned && b.data.pinned) return 1;
+  const da = new Date(a.data.published).getTime();
+  const db = new Date(b.data.published).getTime();
+  return db - da;
+});
+---
+
+<MainGridLayout title="问答">
+  <div class="transition flex flex-col rounded-[var(--radius-large)] md:gap-4 mb-4">
+    {qna.map((entry, i) => (
+      <QnaCard
+        entry={entry}
+        title={entry.data.title}
+        tags={entry.data.tags}
+        category={entry.data.category}
+        published={entry.data.published}
+        updated={entry.data.updated}
+        url={url(`/qna/${entry.slug}/`)}
+        image={entry.data.image}
+        description={entry.data.description}
+        draft={entry.data.draft}
+        pinned={entry.data.pinned}
+        class:list="onload-animation"
+        style={`animation-delay: calc(var(--content-delay) + ${i * 50}ms);`}
+      />
+    ))}
+  </div>
+</MainGridLayout>

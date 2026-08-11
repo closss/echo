@@ -163,6 +163,68 @@
       @apply max-w-full overflow-x-auto my-4;
     }
   }
+
+  /* Claude 风格排版：衬线标题 + 手绘感小装饰 */
+  .custom-md {
+    h1, h2, h3 {
+      font-family: "Source Serif 4", "Noto Serif SC", "Songti SC", "STSong", Georgia, serif;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    h2 {
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 0.85em;
+        height: 0.85em;
+        margin-right: 0.4em;
+        vertical-align: -0.06em;
+        background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g fill='none' stroke='%23D97757' stroke-width='1.8' stroke-linecap='round'><path d='M12.4 3.4c4.8.3 8.4 3.9 8.2 8.4-.3 4.8-4.5 8.4-9 8-4.4-.4-8-3.9-7.7-8.4C4.2 7 8 3 12.4 3.4z'/><path d='M12.8 6.8c2.8.3 4.9 2.4 4.8 5'/></g></svg>") no-repeat center / contain;
+        transform: rotate(-10deg);
+      }
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 0.66em;
+        height: 0.66em;
+        margin-left: 0.5em;
+        vertical-align: 0.04em;
+        background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g fill='none' stroke='%23D97757' stroke-width='1.8' stroke-linecap='round'><path d='M12 3.5v4M12.2 16.2v4.3M3.5 12h4M16.3 12.1h4.2M6.4 6.6l2.7 2.6M15 14.9l2.6 2.7M17.6 6.4l-2.7 2.7M9 14.9l-2.6 2.6'/></g></svg>") no-repeat center / contain;
+        transform: rotate(8deg);
+      }
+    }
+
+    h3::after {
+      content: "";
+      display: inline-block;
+      width: 1.6em;
+      height: 0.4em;
+      margin-left: 0.5em;
+      vertical-align: 0.1em;
+      background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 8'><path d='M1 5c3-3 6-3 9 0s6 3 9 0 6-3 9 0' fill='none' stroke='%23D97757' stroke-width='1.6' stroke-linecap='round'/></svg>") no-repeat left center / contain;
+      opacity: 0.85;
+    }
+  }
+}
+
+/* 文章页大标题：衬线 + 右侧小星芒 */
+.post-title {
+  font-family: "Source Serif 4", "Noto Serif SC", "Songti SC", "STSong", Georgia, serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em;
+}
+
+.post-title.sparkle::after {
+  content: "";
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: 0.45em;
+  vertical-align: 0.08em;
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g fill='none' stroke='%23D97757' stroke-width='1.8' stroke-linecap='round'><path d='M12 3.5v4M12.2 16.2v4.3M3.5 12h4M16.3 12.1h4.2M6.4 6.6l2.7 2.6M15 14.9l2.6 2.7M17.6 6.4l-2.7 2.7M9 14.9l-2.6 2.6'/></g></svg>") no-repeat center / contain;
+  transform: rotate(10deg);
 }
 
 /* 全局作用域中的 link 类 */

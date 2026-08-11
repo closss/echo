@@ -4,13 +4,13 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  volar-service-emmet>@emmetio/css-parser: 0.4.0
+
 importers:
 
   .:
     dependencies:
-      '@astrojs/check':
-        specifier: ^0.9.4
-        version: 0.9.4(typescript@5.9.2)
       '@astrojs/mdx':
         specifier: ^4.3.6
         version: 4.3.6(astro@5.13.8(@types/node@24.5.2)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@2.79.2)(stylus@0.64.0)(terser@5.43.1)(typescript@5.9.2)(yaml@2.8.1))
@@ -44,9 +44,18 @@ importers:
       '@fontsource-variable/jetbrains-mono':
         specifier: ^5.2.8
         version: 5.2.8
+      '@fontsource/noto-sans-sc':
+        specifier: ^5.3.0
+        version: 5.3.0
+      '@fontsource/noto-serif-sc':
+        specifier: ^5.3.0
+        version: 5.3.0
       '@fontsource/roboto':
         specifier: ^5.2.8
         version: 5.2.8
+      '@fontsource/source-serif-4':
+        specifier: ^5.3.0
+        version: 5.3.0
       '@iconify-json/fa6-brands':
         specifier: ^1.2.6
         version: 1.2.6
@@ -159,6 +168,9 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0
     devDependencies:
+      '@astrojs/check':
+        specifier: ^0.9.4
+        version: 0.9.4(typescript@5.9.2)
       '@astrojs/ts-plugin':
         specifier: ^1.10.4
         version: 1.10.4
@@ -1124,8 +1136,17 @@ packages:
   '@fontsource-variable/jetbrains-mono@5.2.8':
     resolution: {integrity: sha512-WBA9elru6Jdp5df2mES55wuOO0WIrn3kpXnI4+W2ek5u3ZgLS9XS4gmIlcQhiZOWEKl95meYdvK7xI+ETLCq/Q==}
 
+  '@fontsource/noto-sans-sc@5.3.0':
+    resolution: {integrity: sha512-HeqIlGm0+ohOKxZLuHj1qW6r6avHH0OWdKERAcSDI0RQ+MXrteuLKA+M+5eOA8rYy0MFvOR5AT0fQo2rUkye0Q==}
+
+  '@fontsource/noto-serif-sc@5.3.0':
+    resolution: {integrity: sha512-0/zaEFkidiWldE62rTeD74x8ygUsQvejiSNtO0LQxQk3qpaHnlMZ3w4C7yH80B4KTIg8VKeFP4oSgwWMchY9+g==}
+
   '@fontsource/roboto@5.2.8':
     resolution: {integrity: sha512-oh9g4Cg3loVMz9MWeKWfDI+ooxxG1aRVetkiKIb2ESS2rrryGecQ/y4pAj4z5A5ebyw450dYRi/c4k/I3UBhHA==}
+
+  '@fontsource/source-serif-4@5.3.0':
+    resolution: {integrity: sha512-yQz8xmIgMzks8zQbpuca3UYtjxK798XCyQAGdDXmzBgvV7sdoK6d0YvE9F9kiYxORCEMRBgGZDZsSYcXj5KvwA==}
 
   '@iconify-json/fa6-brands@1.2.6':
     resolution: {integrity: sha512-twL3X4KWcxAhbc1vz/mIDsVr+CAItk1/EIfxKUVQtpv6O4eydk5KNYqTZWdvJNHGInUgd6vKg21aWfVgb5DXEg==}
@@ -6385,7 +6406,13 @@ snapshots:
 
   '@fontsource-variable/jetbrains-mono@5.2.8': {}
 
+  '@fontsource/noto-sans-sc@5.3.0': {}
+
+  '@fontsource/noto-serif-sc@5.3.0': {}
+
   '@fontsource/roboto@5.2.8': {}
+
+  '@fontsource/source-serif-4@5.3.0': {}
 
   '@iconify-json/fa6-brands@1.2.6':
     dependencies:

@@ -11,7 +11,7 @@ export const siteConfig: SiteConfig = {
 	title: "hsw's blog",
 	subtitle: "❥(^_-)",
 	themeColor: {
-		hue: 275,
+		hue: 38,
 		fixed: false,
 	},
 	banner: {

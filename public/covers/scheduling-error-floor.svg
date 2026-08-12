@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- 纸面 -->
+  <rect width="1200" height="630" fill="#FAF8F2"/>
+  <!-- 编辑部细边框 -->
+  <rect x="26" y="26" width="1148" height="578" fill="none" stroke="#161513" stroke-opacity="0.85" stroke-width="1.5"/>
+  <rect x="34" y="34" width="1132" height="562" fill="none" stroke="#161513" stroke-opacity="0.25" stroke-width="0.75"/>
+
+  <!-- 顶部刊头 -->
+  <rect x="80" y="76" width="13" height="13" fill="#D9392B"/>
+  <text x="106" y="89" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="19" letter-spacing="5" fill="#161513">FIELD NOTES · NO.02</text>
+  <text x="1120" y="89" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="19" letter-spacing="3" fill="#161513">2026.08.12</text>
+  <line x1="80" y1="112" x2="1120" y2="112" stroke="#161513" stroke-width="2"/>
+
+  <!-- 主标题 -->
+  <text x="80" y="232" font-family="'Noto Serif SC', 'Songti SC', serif" font-weight="900" font-size="92" fill="#161513">2 毫米的收益，</text>
+  <text x="80" y="338" font-family="'Noto Serif SC', 'Songti SC', serif" font-weight="900" font-size="92" fill="#161513">55 毫米的地板。</text>
+  <rect x="84" y="368" width="128" height="7" fill="#D9392B"/>
+
+  <!-- 副题 -->
+  <text x="80" y="420" font-family="'Noto Sans SC', sans-serif" font-size="24" fill="#4A4741">四天，三道嵌套的闸门，一条平方律</text>
+
+  <!-- 概念图：gap 曲线撞上地板 -->
+  <g>
+    <!-- 坐标轴 -->
+    <line x1="640" y1="420" x2="640" y2="540" stroke="#161513" stroke-opacity="0.6" stroke-width="1"/>
+    <line x1="640" y1="540" x2="1120" y2="540" stroke="#161513" stroke-opacity="0.6" stroke-width="1"/>
+    <!-- 地板 -->
+    <rect x="640" y="512" width="480" height="4" fill="#D9392B"/>
+    <text x="1120" y="500" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="16" letter-spacing="1" fill="#D9392B">FLOOR · E_perc ≈ 55 mm</text>
+    <!-- 递减的 gap 曲线 -->
+    <path d="M 660 432 C 740 436, 780 470, 850 488 S 1000 508, 1100 510" fill="none" stroke="#161513" stroke-width="2" stroke-dasharray="7 6"/>
+    <!-- 数据点与标注 -->
+    <circle cx="660" cy="432" r="5" fill="#161513"/>
+    <text x="660" y="418" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="15" fill="#161513">36.17%</text>
+    <circle cx="850" cy="488" r="5" fill="#161513"/>
+    <text x="850" y="474" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="15" fill="#161513">22.38%</text>
+    <circle cx="1100" cy="510" r="5" fill="#D9392B"/>
+    <text x="1096" y="486" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="15" fill="#D9392B">6.64%</text>
+    <!-- 平方律批注 -->
+    <text x="640" y="584" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="16" letter-spacing="1" fill="#4A4741">G ≈ α(2−α)/2 · r² → G_max ≈ 4.6%</text>
+  </g>
+
+  <!-- 底部栏 -->
+  <line x1="80" y1="540" x2="560" y2="540" stroke="#161513" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="80" y="570" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="17" letter-spacing="2" fill="#161513">科研日志 — STREAMING HMR / CAUSAL SCHEDULING</text>
+  <text x="80" y="596" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="14" letter-spacing="2" fill="#8A8578">VERDICT: KILL · KEEP THE LAW</text>
+</svg>

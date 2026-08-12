@@ -164,67 +164,110 @@
     }
   }
 
-  /* Claude 风格排版：衬线标题 + 手绘感小装饰 */
+  /* ===== 编辑部 / 学术海报风排版 ===== */
   .custom-md {
+    counter-reset: h2;
+
     h1, h2, h3 {
       font-family: "Source Serif 4", "Noto Serif SC", "Songti SC", "STSong", Georgia, serif;
-      font-weight: 600;
       letter-spacing: 0.01em;
     }
 
+    /* 章节标题：等宽编号 + 粗衬线 + 粗黑下框线 */
     h2 {
-      &::before {
-        content: "";
-        display: inline-block;
-        width: 0.85em;
-        height: 0.85em;
-        margin-right: 0.4em;
-        vertical-align: -0.06em;
-        background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g fill='none' stroke='%23D97757' stroke-width='1.8' stroke-linecap='round'><path d='M12.4 3.4c4.8.3 8.4 3.9 8.2 8.4-.3 4.8-4.5 8.4-9 8-4.4-.4-8-3.9-7.7-8.4C4.2 7 8 3 12.4 3.4z'/><path d='M12.8 6.8c2.8.3 4.9 2.4 4.8 5'/></g></svg>") no-repeat center / contain;
-        transform: rotate(-10deg);
-      }
+      font-weight: 900;
+      @apply mt-14 mb-7 pb-3;
+      border-bottom: 2px solid var(--deep-text);
 
-      &::after {
-        content: "";
-        display: inline-block;
-        width: 0.66em;
-        height: 0.66em;
-        margin-left: 0.5em;
-        vertical-align: 0.04em;
-        background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g fill='none' stroke='%23D97757' stroke-width='1.8' stroke-linecap='round'><path d='M12 3.5v4M12.2 16.2v4.3M3.5 12h4M16.3 12.1h4.2M6.4 6.6l2.7 2.6M15 14.9l2.6 2.7M17.6 6.4l-2.7 2.7M9 14.9l-2.6 2.6'/></g></svg>") no-repeat center / contain;
-        transform: rotate(8deg);
+      &::before {
+        counter-increment: h2;
+        content: counter(h2, decimal-leading-zero);
+        font-family: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-weight: 500;
+        font-size: 0.5em;
+        color: var(--primary);
+        margin-right: 1em;
+        vertical-align: 0.45em;
+        letter-spacing: 0.2em;
       }
     }
 
-    h3::after {
-      content: "";
-      display: inline-block;
-      width: 1.6em;
-      height: 0.4em;
-      margin-left: 0.5em;
-      vertical-align: 0.1em;
-      background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 8'><path d='M1 5c3-3 6-3 9 0s6 3 9 0 6-3 9 0' fill='none' stroke='%23D97757' stroke-width='1.6' stroke-linecap='round'/></svg>") no-repeat left center / contain;
-      opacity: 0.85;
+    /* 小节标题：朱红方块符 */
+    h3 {
+      font-weight: 700;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 0.4em;
+        height: 0.4em;
+        background: var(--primary);
+        margin-right: 0.6em;
+        vertical-align: 0.1em;
+      }
+    }
+
+    /* 首字下沉 */
+    > p:first-of-type::first-letter {
+      font-family: "Source Serif 4", "Noto Serif SC", "Songti SC", "STSong", Georgia, serif;
+      font-weight: 900;
+      font-size: 3.1em;
+      line-height: 0.85;
+      float: left;
+      padding: 0.05em 0.14em 0 0;
+      color: var(--primary);
+    }
+
+    /* 科学论文式表格：只有顶线、栏目线、底线 */
+    table {
+      @apply w-full my-8;
+      border-collapse: collapse;
+      border-top: 2px solid var(--deep-text);
+      border-bottom: 2px solid var(--deep-text);
+
+      thead {
+        border-bottom: 1px solid var(--deep-text);
+
+        th {
+          font-family: "JetBrains Mono Variable", ui-monospace, monospace;
+          font-size: 0.78em;
+          letter-spacing: 0.12em;
+          font-weight: 500;
+          text-transform: uppercase;
+          padding: 0.6em 0.8em;
+          border: none;
+        }
+      }
+
+      tbody {
+        tr {
+          border: none;
+        }
+
+        td {
+          border: none;
+          padding: 0.55em 0.8em;
+          font-variant-numeric: tabular-nums;
+        }
+      }
+    }
+
+    /* 分隔线：左对齐朱红短尺 */
+    hr {
+      border: none;
+      height: 4px;
+      width: 72px;
+      background: var(--primary);
+      margin: 3.5rem 0;
     }
   }
 }
 
-/* 文章页大标题：衬线 + 右侧小星芒 */
+/* 文章页与卡片大标题：900 衬线 */
 .post-title {
   font-family: "Source Serif 4", "Noto Serif SC", "Songti SC", "STSong", Georgia, serif !important;
-  font-weight: 700 !important;
+  font-weight: 900 !important;
   letter-spacing: 0.01em;
-}
-
-.post-title.sparkle::after {
-  content: "";
-  display: inline-block;
-  width: 0.6em;
-  height: 0.6em;
-  margin-left: 0.45em;
-  vertical-align: 0.08em;
-  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g fill='none' stroke='%23D97757' stroke-width='1.8' stroke-linecap='round'><path d='M12 3.5v4M12.2 16.2v4.3M3.5 12h4M16.3 12.1h4.2M6.4 6.6l2.7 2.6M15 14.9l2.6 2.7M17.6 6.4l-2.7 2.7M9 14.9l-2.6 2.6'/></g></svg>") no-repeat center / contain;
-  transform: rotate(10deg);
 }
 
 /* 全局作用域中的 link 类 */

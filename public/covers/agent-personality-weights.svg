@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- 纸面 -->
+  <rect width="1200" height="630" fill="#FAF8F2"/>
+  <!-- 编辑部细边框 -->
+  <rect x="26" y="26" width="1148" height="578" fill="none" stroke="#161513" stroke-opacity="0.85" stroke-width="1.5"/>
+  <rect x="34" y="34" width="1132" height="562" fill="none" stroke="#161513" stroke-opacity="0.25" stroke-width="0.75"/>
+
+  <!-- 顶部刊头 -->
+  <rect x="80" y="76" width="13" height="13" fill="#D9392B"/>
+  <text x="106" y="89" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="19" letter-spacing="5" fill="#161513">FIELD NOTES · NO.03</text>
+  <text x="1120" y="89" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="19" letter-spacing="3" fill="#161513">2026.10.10</text>
+  <line x1="80" y1="112" x2="1120" y2="112" stroke="#161513" stroke-width="2"/>
+
+  <!-- 主标题 -->
+  <text x="80" y="232" font-family="'Noto Serif SC', 'Songti SC', serif" font-weight="900" font-size="82" fill="#161513">把经历写进权重：</text>
+  <text x="80" y="338" font-family="'Noto Serif SC', 'Songti SC', serif" font-weight="900" font-size="82" fill="#161513">一次关于 agent 个性的尝试。</text>
+  <rect x="84" y="368" width="128" height="7" fill="#D9392B"/>
+
+  <!-- 副题 -->
+  <text x="80" y="420" font-family="'Noto Sans SC', sans-serif" font-size="24" fill="#4A4741">六轮实验，三条路径，一个关于身份与记忆的分层假设</text>
+
+  <!-- 概念图：权重增量 vs 显式关系记忆 -->
+  <g>
+    <!-- 坐标基线 -->
+    <line x1="640" y1="420" x2="640" y2="540" stroke="#161513" stroke-opacity="0.6" stroke-width="1"/>
+    <line x1="640" y1="540" x2="1120" y2="540" stroke="#161513" stroke-opacity="0.6" stroke-width="1"/>
+
+    <!-- 上层：关系图式 (按人检索的显式记忆) -->
+    <rect x="660" y="420" width="230" height="48" rx="3" fill="#FAF8F2" stroke="#D9392B" stroke-width="1.8" stroke-dasharray="5 3"/>
+    <text x="775" y="443" text-anchor="middle" font-family="'Noto Serif SC', 'Songti SC', serif" font-weight="700" font-size="15" fill="#D9392B">关系图式 · 显式记忆</text>
+    <text x="775" y="460" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8A8578">KEY: PERSON (Dorian/Priya)</text>
+
+    <!-- 下层：气质底色 (写进权重的宽泛倾向) -->
+    <rect x="660" y="480" width="230" height="48" rx="3" fill="#161513" fill-opacity="0.06" stroke="#161513" stroke-width="1.5"/>
+    <text x="775" y="503" text-anchor="middle" font-family="'Noto Serif SC', 'Songti SC', serif" font-weight="700" font-size="15" fill="#161513">稳定气质 · 权重增量</text>
+    <text x="775" y="520" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#4A4741">W_base + ΔW_temperament</text>
+
+    <!-- 决策输出汇合点 -->
+    <path d="M 890 444 C 940 444, 940 470, 975 470" fill="none" stroke="#D9392B" stroke-width="2" stroke-dasharray="4 3"/>
+    <path d="M 890 504 C 940 504, 940 482, 975 482" fill="none" stroke="#161513" stroke-width="2"/>
+
+    <circle cx="1025" cy="476" r="32" fill="#FAF8F2" stroke="#161513" stroke-width="2"/>
+    <text x="1025" y="472" text-anchor="middle" font-family="'Noto Serif SC', 'Songti SC', serif" font-weight="900" font-size="13" fill="#161513">情境</text>
+    <text x="1025" y="489" text-anchor="middle" font-family="'Noto Serif SC', 'Songti SC', serif" font-weight="900" font-size="13" fill="#D9392B">决策</text>
+
+    <!-- 批注公式 -->
+    <text x="640" y="584" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="15" letter-spacing="0.5" fill="#4A4741">SPLIT: TEMPERAMENT IN WEIGHTS, RELATIONS IN MEMORY</text>
+  </g>
+
+  <!-- 底部栏 -->
+  <line x1="80" y1="540" x2="560" y2="540" stroke="#161513" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="80" y="570" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="17" letter-spacing="2" fill="#161513">科研日志 — DIGITAL SOCIETY / AGENT PERSONA</text>
+  <text x="80" y="596" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="14" letter-spacing="2" fill="#8A8578">VERDICT: SEPARATE TEMPERAMENT FROM RELATIONS</text>
+</svg>

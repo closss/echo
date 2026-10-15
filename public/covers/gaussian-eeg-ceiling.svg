@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- 纸面 -->
+  <rect width="1200" height="630" fill="#FAF8F2"/>
+  <!-- 编辑部细边框 -->
+  <rect x="26" y="26" width="1148" height="578" fill="none" stroke="#161513" stroke-opacity="0.85" stroke-width="1.5"/>
+  <rect x="34" y="34" width="1132" height="562" fill="none" stroke="#161513" stroke-opacity="0.25" stroke-width="0.75"/>
+
+  <!-- 顶部刊头 -->
+  <rect x="80" y="76" width="13" height="13" fill="#D9392B"/>
+  <text x="106" y="89" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="19" letter-spacing="5" fill="#161513">FIELD NOTES · NO.01</text>
+  <text x="1120" y="89" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="19" letter-spacing="3" fill="#161513">2026.08.11</text>
+  <line x1="80" y1="112" x2="1120" y2="112" stroke="#161513" stroke-width="2"/>
+
+  <!-- 主标题 -->
+  <text x="80" y="232" font-family="'Noto Serif SC', 'Songti SC', serif" font-weight="900" font-size="88" fill="#161513">50 个高斯球，</text>
+  <text x="80" y="338" font-family="'Noto Serif SC', 'Songti SC', serif" font-weight="900" font-size="88" fill="#161513">撞上 59 维的天花板。</text>
+  <rect x="84" y="368" width="128" height="7" fill="#D9392B"/>
+
+  <!-- 副题 -->
+  <text x="80" y="420" font-family="'Noto Sans SC', sans-serif" font-size="24" fill="#4A4741">花一天半证伪一个想法，换来一条模态筛选规则</text>
+
+  <!-- 概念图：自由度 vs 测量维度 -->
+  <g>
+    <!-- 坐标轴 -->
+    <line x1="640" y1="420" x2="640" y2="540" stroke="#161513" stroke-opacity="0.6" stroke-width="1"/>
+    <line x1="640" y1="540" x2="1120" y2="540" stroke="#161513" stroke-opacity="0.6" stroke-width="1"/>
+
+    <!-- 59维天花板 -->
+    <line x1="640" y1="465" x2="1120" y2="465" stroke="#D9392B" stroke-width="3" stroke-dasharray="6 4"/>
+    <text x="1120" y="452" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="16" letter-spacing="1" fill="#D9392B">CEILING · rank(L) ≤ M = 59</text>
+
+    <!-- 柱状图对比 -->
+    <!-- 50球的自由度 3K = 150 -->
+    <rect x="700" y="425" width="55" height="115" fill="#161513" fill-opacity="0.85"/>
+    <text x="727" y="415" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="14" font-weight="700" fill="#161513">3K=150</text>
+    <text x="727" y="562" text-anchor="middle" font-family="'Noto Serif SC', serif" font-size="13" fill="#4A4741">K=50 球</text>
+
+    <!-- 零空间溢出指示 -->
+    <rect x="700" y="425" width="55" height="40" fill="#D9392B" fill-opacity="0.8"/>
+    <text x="785" y="445" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13" font-weight="700" fill="#D9392B">NULL SPACE &gt; 90</text>
+
+    <!-- 导联电极 rank(L) -->
+    <rect x="880" y="465" width="55" height="75" fill="#D9392B" fill-opacity="0.2" stroke="#D9392B" stroke-width="1.5"/>
+    <text x="907" y="455" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="14" font-weight="700" fill="#D9392B">M=59</text>
+    <text x="907" y="562" text-anchor="middle" font-family="'Noto Serif SC', serif" font-size="13" fill="#4A4741">EEG 导联</text>
+
+    <!-- 判据公式 -->
+    <text x="640" y="584" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="16" letter-spacing="1" fill="#4A4741">CRITERION: 3K &lt; rank(L) (M - 1)</text>
+  </g>
+
+  <!-- 底部栏 -->
+  <line x1="80" y1="540" x2="560" y2="540" stroke="#161513" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="80" y="570" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="17" letter-spacing="2" fill="#161513">科研日志 — 4DGS / EEG SOURCE IMAGING</text>
+  <text x="80" y="596" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="14" letter-spacing="2" fill="#8A8578">VERDICT: 3K &lt; rank(L) · MODALITY FILTER</text>
+</svg>

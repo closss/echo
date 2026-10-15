@@ -2,6 +2,7 @@
 title: 50 个高斯球撞上 59 维的天花板
 published: 2026-08-11
 description: 花一天半证伪了一个想法，换来一条算一个数就能用的模态筛选规则。
+image: '/covers/gaussian-eeg-ceiling.svg'
 tags: ["4DGS", "EEG", "科研随笔"]
 category: 科研日志
 draft: false

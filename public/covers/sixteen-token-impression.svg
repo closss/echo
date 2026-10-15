@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- 纸面 -->
+  <rect width="1200" height="630" fill="#FAF8F2"/>
+  <!-- 编辑部细边框 -->
+  <rect x="26" y="26" width="1148" height="578" fill="none" stroke="#161513" stroke-opacity="0.85" stroke-width="1.5"/>
+  <rect x="34" y="34" width="1132" height="562" fill="none" stroke="#161513" stroke-opacity="0.25" stroke-width="0.75"/>
+
+  <!-- 顶部刊头 -->
+  <rect x="80" y="76" width="13" height="13" fill="#D9392B"/>
+  <text x="106" y="89" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="19" letter-spacing="5" fill="#161513">FIELD NOTES · NO.04</text>
+  <text x="1120" y="89" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="19" letter-spacing="3" fill="#161513">2026.10.15</text>
+  <line x1="80" y1="112" x2="1120" y2="112" stroke="#161513" stroke-width="2"/>
+
+  <!-- 主标题 -->
+  <text x="80" y="232" font-family="'Noto Serif SC', 'Songti SC', serif" font-weight="900" font-size="80" fill="#161513">十六个 token 的印象：</text>
+  <text x="80" y="338" font-family="'Noto Serif SC', 'Songti SC', serif" font-weight="900" font-size="80" fill="#161513">再谈把经历写在哪里。</text>
+  <rect x="84" y="368" width="128" height="7" fill="#D9392B"/>
+
+  <!-- 副题 -->
+  <text x="80" y="420" font-family="'Noto Sans SC', sans-serif" font-size="24" fill="#4A4741">找到了能用的机制，也撞上了多人组合的边界</text>
+
+  <!-- 概念图：16 软 token 前缀与同数据对照 -->
+  <g>
+    <!-- 坐标 / 图表底线 -->
+    <line x1="640" y1="420" x2="640" y2="540" stroke="#161513" stroke-opacity="0.6" stroke-width="1"/>
+    <line x1="640" y1="540" x2="1120" y2="540" stroke="#161513" stroke-opacity="0.6" stroke-width="1"/>
+
+    <!-- 16 软 token 模块示意 -->
+    <g transform="translate(650, 420)">
+      <rect x="0" y="0" width="170" height="42" rx="3" fill="#D9392B" fill-opacity="0.12" stroke="#D9392B" stroke-width="1.5"/>
+      <text x="85" y="26" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="13" fill="#D9392B">16 SOFT TOKENS</text>
+
+      <path d="M 175 21 L 210 21" stroke="#161513" stroke-width="1.5"/>
+      
+      <rect x="215" y="0" width="220" height="42" rx="3" fill="#161513" fill-opacity="0.05" stroke="#161513" stroke-width="1.2"/>
+      <text x="325" y="26" text-anchor="middle" font-family="'Noto Serif SC', serif" font-size="13" fill="#161513">FROZEN LLM + 问题输入</text>
+    </g>
+
+    <!-- 同数据对照指标 -->
+    <!-- 方案 A: 软 token -->
+    <text x="650" y="488" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#161513">SOFT TOKENS · 65K params</text>
+    <text x="1120" y="488" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="13" fill="#161513">MMLU -0.8% · GSM8K ±0%</text>
+
+    <!-- 方案 B: 32层 LoRA -->
+    <text x="650" y="514" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#D9392B">FULL LoRA · 10.5M params</text>
+    <text x="1120" y="514" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="13" fill="#D9392B">GSM8K -11.7% (COLLAPSE)</text>
+
+    <!-- 底部结论 -->
+    <text x="640" y="584" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="15" letter-spacing="0.5" fill="#4A4741">RULE: SAME DATA · POSITION SETS GENERALITY COST</text>
+  </g>
+
+  <!-- 底部栏 -->
+  <line x1="80" y1="540" x2="560" y2="540" stroke="#161513" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="80" y="570" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="17" letter-spacing="2" fill="#161513">科研日志 — SOFT TOKENS / MODULAR IDENTITY</text>
+  <text x="80" y="596" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="14" letter-spacing="2" fill="#8A8578">VERDICT: 16 TOKENS TRANSFER · BINDING REMAINS OPEN</text>
+</svg>
